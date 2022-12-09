@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "dc2f26f7-887f-42d2-adba-6a5fc1042719",
+		"name": "seat app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20372298"
+	},
+	"item": [
+		{
+			"name": "postRegister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"empId\":420,\r\n\"empName\":\"sundar\",\r\n\"emailId\":\"sundar@gmail.com\",\r\n\"password\":\"Aa@12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"emailId\":\"sundar@gmail.com\",\r\n\"password\":\"Aa@12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postForgotPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"emailId\":\"aaa@gmail.com\",\r\n\"password\":\"wuti65yubf3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/user/forgot-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"user",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "seat-available",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/seat-available?bookingDate=2022-10-15&token=eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjU3MjAxODcsImlzcyI6InN1bmRhckBnbWFpbC5jb20iLCJuYW1lIjoic3VuZGFyIiwiZW1wX2lkIjo0MjB9.kemVHcPQdL_rzHA835JN5kAdwzwvQUq_kvHSnr7V_7k",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"seat-available"
+					],
+					"query": [
+						{
+							"key": "bookingDate",
+							"value": "2022-10-15"
+						},
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjU3MjAxODcsImlzcyI6InN1bmRhckBnbWFpbC5jb20iLCJuYW1lIjoic3VuZGFyIiwiZW1wX2lkIjo0MjB9.kemVHcPQdL_rzHA835JN5kAdwzwvQUq_kvHSnr7V_7k"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "booking",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bayNumber\":210,\r\n    \"bookingDate\":\"2022-10-17\",\r\n    \"project\":\"teplay\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/book/420?token=eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjU3MjM0OTMsImlzcyI6InN1bmRhckBnbWFpbC5jb20iLCJuYW1lIjoic3VuZGFyIiwiZW1wX2lkIjo0MjB9.y-0aVa1XjPirPYr9eeU9vf1hgdG_QVNqcoY37l39FCw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"book",
+						"420"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjU3MjM0OTMsImlzcyI6InN1bmRhckBnbWFpbC5jb20iLCJuYW1lIjoic3VuZGFyIiwiZW1wX2lkIjo0MjB9.y-0aVa1XjPirPYr9eeU9vf1hgdG_QVNqcoY37l39FCw"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add seat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bayNumber\":210\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/save?token=eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjU3MjAxODcsImlzcyI6InN1bmRhckBnbWFpbC5jb20iLCJuYW1lIjoic3VuZGFyIiwiZW1wX2lkIjo0MjB9.kemVHcPQdL_rzHA835JN5kAdwzwvQUq_kvHSnr7V_7k",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"save"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2NjU3MjAxODcsImlzcyI6InN1bmRhckBnbWFpbC5jb20iLCJuYW1lIjoic3VuZGFyIiwiZW1wX2lkIjo0MjB9.kemVHcPQdL_rzHA835JN5kAdwzwvQUq_kvHSnr7V_7k"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
